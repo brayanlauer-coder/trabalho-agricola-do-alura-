@@ -1,68 +1,66 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento de Umidade do Solo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<header>
+    <h1>🌱 AgroMonitor</h1>
+    <p>Monitoramento inteligente da umidade do solo</p>
+</header>
 
-<body>
+<main class="container">
 
-    <header>
-        <h1>🌱 AgroMonitor</h1>
-        <p>Monitoramento da umidade do solo</p>
-    </header>
+    <section class="card">
+        <h2>💧 Umidade atual</h2>
 
-    <main class="container">
+        <div class="umidade">
+            <span id="valorUmidade">--</span>%
+        </div>
 
-        <section class="card">
-            <h2>Umidade atual</h2>
+        <div class="barra">
+            <div id="barraUmidade"></div>
+        </div>
 
-            <div class="umidade">
-                <span id="valorUmidade">--</span>%
-            </div>
+        <p id="status">Aguardando leitura...</p>
+    </section>
 
-            <div class="barra">
-                <div id="barraUmidade"></div>
-            </div>
+    <section class="card informacoes">
+        <h2>📊 Informações</h2>
 
-            <p id="status">Aguardando leitura...</p>
-        </section>
+        <div class="info">
+            <span>🌡️ Temperatura</span>
+            <strong id="temperatura">-- °C</strong>
+        </div>
 
-        <section class="card informacoes">
-            <h2>Informações</h2>
+        <div class="info">
+            <span>💧 Umidade</span>
+            <strong id="umidadeInfo">--%</strong>
+        </div>
 
-            <div class="info">
-                <span>🌡️ Temperatura</span>
-                <strong id="temperatura">-- °C</strong>
-            </div>
+        <div class="info">
+            <span>🕒 Última leitura</span>
+            <strong id="ultimaLeitura">--</strong>
+        </div>
+    </section>
 
-            <div class="info">
-                <span>💧 Umidade</span>
-                <strong id="umidadeInfo">--%</strong>
-            </div>
+    <section id="alerta" class="alerta">
+        ⚠️ Atenção: o solo está muito seco!
+    </section>
 
-            <div class="info">
-                <span>🕒 Última leitura</span>
-                <strong id="ultimaLeitura">--</strong>
-            </div>
-        </section>
-
-        <section id="alerta" class="alerta">
-            ⚠️ Atenção: o solo está muito seco!
-        </section>
-
-        <button onclick="atualizarDados()">
+    <div class="acoes">
+        <button class="btn-atualizar" onclick="atualizarDados()">
             🔄 Atualizar leitura
         </button>
+    </div>
 
-    </main>
+</main>
 
-    <footer>
-        <p>🌾 Sistema de Agricultura Inteligente</p>
-    </footer>
+<button class="btn-tema" id="btnTema" type="button">
+    🌙 Modo escuro
+</button>
 
-    <script src="script.js"></script>
-</body>
-</html>
+<button class="btn-voltar-topo" type="button">
+    ⬆️ Voltar ao topo
+</button>
+
+<footer>
+    <p>🌾 Sistema de Agricultura Inteligente</p>
+    <p>AgroMonitor • Tecnologia a favor do campo</p>
+</footer>
+
+<script src="script.js"></script>
