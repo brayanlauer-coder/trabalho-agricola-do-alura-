@@ -4,7 +4,7 @@ const umidade = Math.floor(Math.random() * 81) + 10;
 // Simula a temperatura
 const temperatura = Math.floor(Math.random() * 16) + 20;
 
-// Atualiza a porcentagem
+// Atualiza a umidade
 document.getElementById("valorUmidade").textContent = umidade;
 document.getElementById("umidadeInfo").textContent = umidade + "%";
 
